@@ -43,4 +43,6 @@ group :development, :test do
   gem 'spring'
   gem 'i18n', '~> 0.7.0'
 end
-
+group :production do
+  gem 'rails_12factor'
+end
