@@ -44,6 +44,6 @@ group :development, :test do
   gem 'i18n', '~> 0.7.0'
 end
 group :production do
-#  gem 'pg'
+  gem 'pg'
   gem 'rails_12factor'
 end
