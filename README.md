@@ -7,7 +7,7 @@ When you have many cryptocurrencies, like bitcoin, xcp, sjcx, etc.., and you wan
 https://coin-valuator.herokuapp.com/
 
 ##How to work
-1 .gets balance of each cryptocurencies from https://blockchain.info/q/addressbalance/ and http://xcp.blockscan.com/api2?module=address&action=balance&btc_address
+1. gets balance of each cryptocurencies from https://blockchain.info/q/addressbalance/ and http://xcp.blockscan.com/api2?module=address&action=balance&btc_address
 2. converts to btc by https://poloniex.com/public?command=returnTicker
 3. sums them up
 4. converts to currencies by https://blockchain.info/ja/ticker 
@@ -16,7 +16,9 @@ https://coin-valuator.herokuapp.com/
 Improvements to the codebase and pull requests are encouraged.
 
 
-##donate
-BTC:18xgGTTzZU9etyBt5wC8gS2tKn5No33jw3
+##Donation
+18xgGTTzZU9etyBt5wC8gS2tKn5No33jw3(BTC)
+
 If you want me to add exchanges, coins,etc... donate first and tweet your requests with your btc address to @storj_jp
+
 (Your donation never gurantee to meet your requests.) 

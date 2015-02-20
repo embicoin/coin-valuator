@@ -8,11 +8,14 @@ class ValuatorController < ApplicationController
             @addresses=params[:form][:addresses]
             @currency=params[:form][:currency]
             @coins={}
-            @addresses.split('\n').each {|adr|
-                coin={}
-                coin.merge!(getBTC(adr))
-                coin.merge!(getParty(adr))
-                @coins.store(adr,coin)
+            @addresses.each_line {|adr|
+                adr.chomp!
+                if adr!="" then
+                    coin={}
+                    coin.merge!(getBTC(adr))
+                    coin.merge!(getParty(adr))
+                    @coins.store(adr,coin)
+                end
             }
             @btcSum=0
             @currencySum=0
