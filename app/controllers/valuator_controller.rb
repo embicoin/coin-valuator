@@ -70,7 +70,7 @@ class ValuatorController < ApplicationController
     end
 
     def getTicker()
-        uri=URI.parse('https://blockchain.info/ja/ticker')
+        uri=URI.parse('https://blockchain.info/ticker')
         json=JSON.parse(Net::HTTP.get(uri))
         return json
     end
