@@ -19,6 +19,6 @@ Improvements to the codebase and pull requests are encouraged.
 ##Donation
 18xgGTTzZU9etyBt5wC8gS2tKn5No33jw3(BTC)
 
-If you want me to add exchanges, coins,etc... donate first and tweet your requests with your btc address to @storj_jp
+If you want me to add exchanges, coins,etc... donate first and tweet your requests to @storj_jp with your btc address.
 
 (Your donation never gurantee to meet your requests.) 

@@ -1,38 +1,24 @@
 <h1>CoinValuator</h1>
 
-<h2>Purpose</h2>
-<p>
-When you have many kinds of cryptocurrencies, like bitcoin, xcp, sjcx, etc.., <br>
-and you want to know the total valuation, it bothers you to valuate market price 
-of each currencies and sum them up. <br>
-This application automatically valuates market price, sums them up, and convers the currency you want, <br>
-once you paste cryptocurency addresses list.
-</p>
-<h2>How to work</h2>
-1.gets balance of each cryptocurencies from https://blockchain.info/q/addressbalance/ <br>
-&nbsp;&nbsp;and http://xcp.blockscan.com/api2?module=address&action=balance&btc_address <br>
-2. converts to btc by https://poloniex.com/public?command=returnTicker <br>
-3. sums them up <br>
-4. converts to currencies by https://blockchain.info/ja/ticker
 
-<br>
 
 <%= form_for :form  do |f| %>
-  <p>
+  <p class="form-group">
     <%= f.label "currency" %>
-    <%= f.select :currency,@currencies.map{|t| [t,t]},:selected=>@currency %>
+    <%= f.select :currency,@currencies.map{|t| [t,t]},:selected=>@currency,:class=>"form-control" %>
   </p>
-  <p>
+  <p class="form-group">
     <%= f.label "addresses" %><br>
-    <%= f.text_area :addresses,:value=>@addresses %>
+    <%= f.text_area :addresses,:value=>@addresses ,:class=>"form-control",:size=>"10x10"%>
   </p>
  
   <p>
-    <%= f.submit "evaluate"%>
+    <%= f.submit "evaluate" ,:class=>"btn btn-primary  btn-sm"%>
   </p>
 <% end %>
 
-<table>
+<% if @coins then%>
+<table class="table table-striped table-condensed">
 <tr>
 <th>address</th>
 <th>coin</th>
@@ -40,7 +26,6 @@ once you paste cryptocurency addresses list.
 <th>BTC value</th>
 <th><%=@currency%></th>
 </tr>
-<% if @coins then%>
 <% @coins.each{|adr,coin| %>
 <% coin.each{|kind,prop| %>
 <tr>
@@ -52,15 +37,22 @@ once you paste cryptocurency addresses list.
 <%}%>
 </tr>
 <%}%>
-<%end%>
-<tr>
+<tr class="danger">
 <td>Total</td>
 <td>-</td>
 <td>-</td>
 <td><%=@btcSum%></td>
 <td><%=@currencySum%></td>
 </table>
+<%end%>
+
 <hr>
-donate BTC:18xgGTTzZU9etyBt5wC8gS2tKn5No33jw3 <br><br>
-If you want me to add exchanges, coins,etc... donate first and tweet your requests with your btc address to @storj_jp<br>
+
+<h2>Detail & Source</h2>
+<a href="https://github.com/storj-jp/coin-valuator">https://github.com/storj-jp/coin-valuator</a>
+
+<h2>Donation</h2>
+18xgGTTzZU9etyBt5wC8gS2tKn5No33jw3(BTC) <br><br>
+If you want me to add exchanges, coins,etc... donate first and tweet your requests to @storj_jp with your btc address. <br>
 (Your donation never gurantee to meet your requests.)
+<br>
