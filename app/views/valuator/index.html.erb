@@ -37,16 +37,23 @@
 <%}%>
 </tr>
 <%}%>
-<tr class="danger">
+<tr class="info">
 <td>Total</td>
 <td>-</td>
 <td>-</td>
 <td><%=@btcSum%></td>
 <td><%=@currencySum%></td>
 </table>
+
+<h2>
+Use this 
+<%= link_to "link", "form[addresses]"=>@addresses,"form[currency]"=>@currency%>
+next time!
+</h2>
+
 <%end%>
 
-<hr>
+<br>
 
 <h2>Detail & Source</h2>
 <a href="https://github.com/storj-jp/coin-valuator">https://github.com/storj-jp/coin-valuator</a>
