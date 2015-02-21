@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'valuator/index'
+  get 'valuator/simple'
   post 'valuator/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

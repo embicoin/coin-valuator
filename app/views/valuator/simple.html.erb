@@ -1,0 +1,29 @@
+
+<% if @coins then%>
+<table class="table table-striped table-condensed">
+<tr>
+<th>address</th>
+<th>coin</th>
+<th>amount</th>
+<th>BTC value</th>
+<th><%=@currency%></th>
+</tr>
+<% @coins.each{|adr,coin| %>
+<% coin.each{|kind,prop| %>
+<tr>
+<td><%=adr%></td>
+<td><%=kind%></td>
+<td><%=prop[:amount]%></td>
+<td><%=prop[:btc]%></td>
+<td><%=prop[:value]%></td>
+<%}%>
+</tr>
+<%}%>
+<tr class="info">
+<td>Total</td>
+<td>-</td>
+<td>-</td>
+<td><%=@btcSum%></td>
+<td><%=@currencySum%></td>
+</table>
+<%end%>

@@ -2,6 +2,10 @@ require 'net/http'
 require 'json'
 
 class ValuatorController < ApplicationController
+    def simple
+        index
+    end
+
     def index
         @currencies=getTicker.keys
         if params[:form] then
